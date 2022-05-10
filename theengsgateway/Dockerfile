@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 LABEL io.hass.version="dev" io.hass.type="addon" io.hass.arch="armv7|armhf|aarch64|i386|amd64"
-#ENV TZ=America/Los_Angeles
+ENV TZ=America/Los_Angeles
 #RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN date
 #RUN apt-get -o Acquire::AllowInsecureRepositories=true \
@@ -14,7 +14,7 @@ RUN date
 #    -o Acquire::Check-Valid-Until=false \
 #    -o Acquire::Check-Date=false \
 #    upgrade  --allow-unauthenticated -y
-RUN apk update && apk upgrade -y
+RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
 #    build-essential \
 #    bluez \
