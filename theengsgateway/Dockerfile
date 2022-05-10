@@ -6,9 +6,12 @@ RUN apt-get -o Acquire::AllowInsecureRepositories=true \
     -o Acquire::Check-Valid-Until=false \
     -o Acquire::Check-Date=false \
     update
-RUN apt-key list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC 648ACFD622F3D138
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get -o Acquire::AllowInsecureRepositories=true \
+    -o Acquire::AllowDowngradeToInsecureRepositories=true \
+    -o Acquire::Check-Valid-Until=false \
+    -o Acquire::Check-Date=false \
+    apt-get upgrade -y
+#RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
 #    build-essential \
 #    bluez \
