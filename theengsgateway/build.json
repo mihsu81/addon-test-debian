@@ -1,11 +1,11 @@
 {
   "squash": false,
   "build_from": {
-    "aarch64": "lolouk44/xiaomi-mi-scale-ha-add-on",
-    "amd64": "lolouk44/xiaomi-mi-scale-ha-add-on",
-    "armhf": "lolouk44/xiaomi-mi-scale-ha-add-on",
-    "armv7": "lolouk44/xiaomi-mi-scale-ha-add-on",
-    "i386": "lolouk44/xiaomi-mi-scale-ha-add-on"
+    "aarch64": "library/debian:latest",
+    "amd64": "library/debian:latest",
+    "armhf": "library/debian:latest",
+    "armv7": "library/debian:latest",
+    "i386": "library/debian:latest"
   },
   "args": {}
 }
