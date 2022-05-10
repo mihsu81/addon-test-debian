@@ -10,7 +10,7 @@ RUN apt-get -o Acquire::AllowInsecureRepositories=true \
     -o Acquire::AllowDowngradeToInsecureRepositories=true \
     -o Acquire::Check-Valid-Until=false \
     -o Acquire::Check-Date=false \
-    install  --allow-unauthenticated --no-install-recommends -y gnupg gpg
+    install --allow-unauthenticated --no-install-recommends -y gpg
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC 648ACFD622F3D138
 RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
