@@ -5,10 +5,10 @@ RUN date
 RUN cat /etc/timezone
 RUN cat /etc/localtime
 RUN date
+RUN hwclock -s
 RUN apt -o Acquire::AllowInsecureRepositories=true \
     -o Acquire::AllowDowngradeToInsecureRepositories=true \
     update
-RUN hwclock -s
 #RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
 #    build-essential \
