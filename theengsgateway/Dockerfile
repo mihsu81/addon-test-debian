@@ -10,7 +10,7 @@ RUN apt-get -o Acquire::AllowInsecureRepositories=true \
     -o Acquire::AllowDowngradeToInsecureRepositories=true \
     -o Acquire::Check-Valid-Until=false \
     -o Acquire::Check-Date=false \
-    upgrade -y
+    upgrade  --allow-unauthenticated -y
 #RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
 #    build-essential \
