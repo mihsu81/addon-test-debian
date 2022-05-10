@@ -6,8 +6,10 @@ RUN cat /etc/timezone
 RUN cat /etc/localtime
 RUN date
 RUN hwclock -s
-RUN apt -o Acquire::AllowInsecureRepositories=true \
+RUN apt-get -o Acquire::AllowInsecureRepositories=true \
     -o Acquire::AllowDowngradeToInsecureRepositories=true \
+    -o Acquire::Check-Valid-Until=false \
+    -o Acquire::Check-Date=false \
     update
 #RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
