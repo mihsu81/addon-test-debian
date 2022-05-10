@@ -5,7 +5,6 @@ RUN date
 RUN cat /etc/timezone
 RUN cat /etc/localtime
 RUN date
-RUN hwclock -s
 RUN apt-get -o Acquire::AllowInsecureRepositories=true \
     -o Acquire::AllowDowngradeToInsecureRepositories=true \
     -o Acquire::Check-Valid-Until=false \
