@@ -1,6 +1,10 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 LABEL io.hass.version="dev" io.hass.type="addon" io.hass.arch="armv7|armhf|aarch64|i386|amd64"
+RUN date
+RUN cat /etc/timezone
+RUN cat /etc/localtime
+RUN date
 RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
 #    build-essential \
