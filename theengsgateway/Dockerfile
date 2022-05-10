@@ -4,17 +4,17 @@ LABEL io.hass.version="dev" io.hass.type="addon" io.hass.arch="armv7|armhf|aarch
 ENV TZ=America/Los_Angeles
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN date
-RUN apt-get -o Acquire::AllowInsecureRepositories=true \
-    -o Acquire::AllowDowngradeToInsecureRepositories=true \
-    -o Acquire::Check-Valid-Until=false \
-    -o Acquire::Check-Date=false \
-    update
-RUN apt-get -o Acquire::AllowInsecureRepositories=true \
-    -o Acquire::AllowDowngradeToInsecureRepositories=true \
-    -o Acquire::Check-Valid-Until=false \
-    -o Acquire::Check-Date=false \
-    upgrade  --allow-unauthenticated -y
-#RUN apt-get update && apt-get upgrade -y
+#RUN apt-get -o Acquire::AllowInsecureRepositories=true \
+#    -o Acquire::AllowDowngradeToInsecureRepositories=true \
+#    -o Acquire::Check-Valid-Until=false \
+#    -o Acquire::Check-Date=false \
+#    update
+#RUN apt-get -o Acquire::AllowInsecureRepositories=true \
+#    -o Acquire::AllowDowngradeToInsecureRepositories=true \
+#    -o Acquire::Check-Valid-Until=false \
+#    -o Acquire::Check-Date=false \
+#    upgrade  --allow-unauthenticated -y
+RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install --no-install-recommends -y \
 #    build-essential \
 #    bluez \
