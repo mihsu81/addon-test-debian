@@ -1,11 +1,11 @@
 {
-  "squash": true,
+  "squash": false,
   "build_from": {
-    "aarch64": "homeassistant/aarch64-base-debian:bullseye",
-    "amd64": "homeassistant/amd64-base-debian:bullseye",
-    "armhf": "homeassistant/armhf-base-debian:bullseye",
-    "armv7": "homeassistant/armv7-base-debian:bullseye",
-    "i386": "homeassistant/i386-base-debian:bullseye"
+    "aarch64": "lolouk44/xiaomi-mi-scale-ha-add-on",
+    "amd64": "lolouk44/xiaomi-mi-scale-ha-add-on",
+    "armhf": "lolouk44/xiaomi-mi-scale-ha-add-on",
+    "armv7": "lolouk44/xiaomi-mi-scale-ha-add-on",
+    "i386": "lolouk44/xiaomi-mi-scale-ha-add-on"
   },
   "args": {}
 }
