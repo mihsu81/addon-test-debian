@@ -1,6 +1,6 @@
 {
   "name": "TheengsGateway",
-  "version": "latest",
+  "version": "buster",
   "slug": "theengsgw",
   "description": "TheengsGateway HA Add-on",
   "url": "https://github.com/mihsu81/addon-theengsgw",
