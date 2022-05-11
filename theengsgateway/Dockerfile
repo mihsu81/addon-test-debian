@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 RUN date
-RUN date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+#RUN date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 RUN date
 #RUN apt-get -o Acquire::AllowInsecureRepositories=true \
 #    -o Acquire::AllowDowngradeToInsecureRepositories=true \
