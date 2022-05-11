@@ -11,6 +11,7 @@
   "host_network": true,
   "privileged": ["NET_ADMIN", "SYS_ADMIN"],
   "host_dbus": true,
+  "map": ["ssl:ro"],
   "options": {
     "MQTT_HOST": "192.168.45.100",
     "MQTT_USERNAME": "user",
