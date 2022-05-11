@@ -1,5 +1,5 @@
-FROM python:3.8-slim
-LABEL io.hass.version="dev" io.hass.type="addon" io.hass.arch="armv7|armhf|aarch64|i386|amd64"
+ARG BUILD_FROM
+FROM $BUILD_FROM
 RUN date
 #RUN apt-get -o Acquire::AllowInsecureRepositories=true \
 #    -o Acquire::AllowDowngradeToInsecureRepositories=true \

@@ -4,7 +4,6 @@
   "slug": "theengsgw",
   "description": "TheengsGateway HA Add-on",
   "url": "https://github.com/mihsu81/addon-theengsgw",
-  "image": "lolouk44/xiaomi-mi-scale-ha-add-on",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
@@ -12,6 +11,7 @@
   "host_network": true,
   "privileged": ["NET_ADMIN", "SYS_ADMIN"],
   "host_dbus": true,
+  "volumes": ["/etc/timezone:/etc/timezone:ro", "/etc/localtime:/etc/localtime:ro"],
   "options": {
     "MQTT_HOST": "192.168.45.100",
     "MQTT_USERNAME": "user",
