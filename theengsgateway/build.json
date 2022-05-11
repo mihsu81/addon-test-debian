@@ -7,5 +7,5 @@
     "armv7": "homeassistant/armv7-base-debian:bullseye",
     "i386": "homeassistant/i386-base-debian:bullseye"
   },
-  "args": {}
+  "args": {-v "/etc/localtime:/etc/localtime:ro"}
 }
