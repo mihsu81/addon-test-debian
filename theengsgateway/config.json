@@ -4,7 +4,7 @@
   "slug": "theengsgw",
   "description": "TheengsGateway HA Add-on",
   "url": "https://github.com/mihsu81/addon-theengsgw",
-  "image": "lolouk44/xiaomi-mi-scale-ha-add-on",
+  "image": "lolouk44/xiaomi-mi-scale-ha-add-on:latest",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
