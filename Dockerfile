@@ -1,21 +1,5 @@
-#ARG BUILD_FROM
-#FROM $BUILD_FROM
-FROM homeassistant/armv7-base-debian:buster
-RUN date
-#RUN date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
-RUN rm -f /etc/localtime
-VOLUME /etc/localtime
-RUN date
-#RUN apt-get -o Acquire::AllowInsecureRepositories=true \
-#    -o Acquire::AllowDowngradeToInsecureRepositories=true \
-#    -o Acquire::Check-Valid-Until=false \
-#    -o Acquire::Check-Date=false \
-#    update
-#RUN apt-get -o Acquire::AllowInsecureRepositories=true \
-#    -o Acquire::AllowDowngradeToInsecureRepositories=true \
-#    -o Acquire::Check-Valid-Until=false \
-#    -o Acquire::Check-Date=false \
-#    upgrade  --allow-unauthenticated -y
+ARG BUILD_FROM
+FROM $BUILD_FROM
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install --no-install-recommends -y \
     build-essential \
@@ -25,7 +9,8 @@ RUN apt-get install --no-install-recommends -y \
     libglib2.0-dev \
 	cmake \
 	ninja-build \
-	openssl
+	libssl-dev \
+	apt-utils
 RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install TheengsGateway
 RUN pip3 install --upgrade TheengsGateway
