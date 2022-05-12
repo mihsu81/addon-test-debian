@@ -24,7 +24,8 @@ RUN apt-get install --no-install-recommends -y \
     python3-dev \
     libglib2.0-dev \
 	cmake \
-	ninja-build
+	ninja-build \
+	openssl
 RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install TheengsGateway
 RUN pip3 install --upgrade TheengsGateway
