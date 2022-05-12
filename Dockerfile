@@ -1,5 +1,6 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+#ARG BUILD_FROM
+#FROM $BUILD_FROM
+FROM homeassistant/armv7-base-debian:buster
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install --no-install-recommends -y \
     build-essential \
