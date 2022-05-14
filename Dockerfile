@@ -13,8 +13,8 @@ RUN apt-get install --no-install-recommends -y \
 	libssl-dev \
 	apt-utils
 RUN pip3 install --upgrade pip setuptools wheel
-RUN pip3 install TheengsGateway
-RUN pip3 install --upgrade TheengsGateway
+RUN pip3 install --extra-index-url=https://www.piwheels.org/simple TheengsGateway
+RUN pip3 install --extra-index-url=https://www.piwheels.org/simple --upgrade TheengsGateway
 ENV current /root
 ENV HOME $current
 WORKDIR $current
