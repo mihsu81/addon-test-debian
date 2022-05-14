@@ -3,18 +3,17 @@
 FROM homeassistant/armv7-base-debian:buster
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install --no-install-recommends -y \
-    build-essential \
+#    build-essential \
     bluez \
-    python3-pip \
-    python3-dev \
-    libglib2.0-dev \
-	cmake \
-	ninja-build \
-	libssl-dev \
-	apt-utils
-RUN pip3 install --upgrade pip setuptools wheel
+    python3-pip
+#    python3-dev \
+#    libglib2.0-dev \
+#    cmake \
+#    ninja-build \
+#    libssl-dev \
+#    apt-utils
+#RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install --extra-index-url=https://www.piwheels.org/simple TheengsGateway
-RUN pip3 install --extra-index-url=https://www.piwheels.org/simple --upgrade TheengsGateway
 ENV current /root
 ENV HOME $current
 WORKDIR $current
