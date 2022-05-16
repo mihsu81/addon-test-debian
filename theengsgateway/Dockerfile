@@ -1,19 +1,9 @@
 #ARG BUILD_FROM
 #FROM $BUILD_FROM
 FROM homeassistant/armv7-base-debian:buster
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install --no-install-recommends -y \
-#    build-essential \
-    bluez \
-    python3-pip
-#    python3-dev \
-#    libglib2.0-dev \
-#    cmake \
-#    ninja-build \
-#    libssl-dev \
-#    apt-utils
-#RUN pip3 install --upgrade pip setuptools wheel
-RUN pip3 install --extra-index-url=https://www.piwheels.org/simple TheengsGateway
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install --no-install-recommends -y bluez python3-pip && \
+    pip3 install --extra-index-url=https://www.piwheels.org/simple TheengsGateway
 ENV current /root
 ENV HOME $current
 WORKDIR $current
