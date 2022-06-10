@@ -1,6 +1,6 @@
 {
   "name": "TheengsGateway Test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "slug": "theengsgw_test",
   "description": "TheengsGateway HA Add-on Test",
   "url": "https://github.com/mihsu81/addon-test-debian",
