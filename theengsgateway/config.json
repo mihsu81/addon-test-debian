@@ -7,6 +7,7 @@
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
+  "init": false,
   "panel_admin": false,
   "host_network": true,
   "privileged": ["NET_ADMIN", "SYS_ADMIN"],
@@ -22,7 +23,11 @@
     "PUBLISH_ALL": true,
     "SCAN_DUR": 60,
     "TIME_BETWEEN": 60,
-    "LOG_LEVEL": "WARNING"
+    "LOG_LEVEL": "WARNING",
+    "DISCOVERY": true,
+    "DISCOVERY_TOPIC": "homeassistant/sensor",
+    "DISCOVERY_DEVICE_NAME": "TheengsGateway",
+    "DISCOVERY_FILTER": "[IBEACON,GAEN,MS-CDP]"
   },
   "schema": {
     "MQTT_HOST": "str",
@@ -34,6 +39,10 @@
     "PUBLISH_ALL": "bool?",
     "SCAN_DUR": "int?",
     "TIME_BETWEEN": "int?",
-    "LOG_LEVEL": "str?"
+    "LOG_LEVEL": "str?",
+    "DISCOVERY": "bool?",
+    "DISCOVERY_TOPIC": "str?",
+    "DISCOVERY_DEVICE_NAME": "str?",
+    "DISCOVERY_FILTER": "str?"
   }
 }
